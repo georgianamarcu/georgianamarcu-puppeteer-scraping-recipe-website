@@ -54,14 +54,14 @@ const scrapeURLsFromOnePage = async (url) => {
   await browser.close();
 };
 
-//(the urls are saved aleady in a JSON file so this next function won't be called again)
+// Saving the urls in the JSON so they don't get scraped each time
 
-// const loopThroughArray = async () => {
-//   for (const link of baseurls){
-//   await scrapeURLsFromOnePage(link)
-// }
-// fs.writeFileSync("recipeData.json", JSON.stringify(finalURLs2))  -> Saving the urls in the JSON so I don't scrape them each time
-// }
+const loopThroughArray = async () => {
+  for (const link of baseurls){
+  await scrapeURLsFromOnePage(link)
+}
+fs.writeFileSync("recipeData.json", JSON.stringify(finalURLs2))  
+}
 
 //Function to scrap the content from each recipe url
 
@@ -135,7 +135,7 @@ const scrapContentFromUrls = async (urls) => {
 
     recipeData.push(recipe);
   }
-  // fs.writeFileSync("AllRecipes.json", JSON.stringify(recipeData))
+  fs.writeFileSync("AllRecipes.json", JSON.stringify(recipeData))
   await browser.close();
 };
 
