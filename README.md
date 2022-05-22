@@ -1,6 +1,6 @@
 # Scraping data with Puppeteer
 
-This was created for the first group project called [Not another CookBook](https://github.com/RaphaCH/not-another-cookbook) as the last step in The Hill stage at the BeCode formation.
+This was created for the first group project called [Not another CookBook](https://github.com/RaphaCH/not-another-cookbook) as the last step in The Hill stage at the BeCode formation. The application is a cook book application which initially needed recipes data, but in which the user could add his own recipe.
 
 ## :bulb: What was the objective?
 
